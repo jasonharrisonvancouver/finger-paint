@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9F7B1FB521F272310095F615 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B1FB421F272310095F615 /* AppDelegate.m */; };
-		9F7B1FB821F272310095F615 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B1FB721F272310095F615 /* ViewController.m */; };
+		9F7B1FB821F272310095F615 /* PaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B1FB721F272310095F615 /* PaintView.m */; };
 		9F7B1FBB21F272310095F615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B1FB921F272310095F615 /* Main.storyboard */; };
 		9F7B1FBD21F272310095F615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B1FBC21F272310095F615 /* Assets.xcassets */; };
 		9F7B1FC021F272310095F615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B1FBE21F272310095F615 /* LaunchScreen.storyboard */; };
 		9F7B1FC321F272310095F615 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B1FC221F272310095F615 /* main.m */; };
 		9F7B1FCD21F272310095F615 /* FingerPaintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B1FCC21F272310095F615 /* FingerPaintTests.m */; };
 		9F7B1FD821F272310095F615 /* FingerPaintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B1FD721F272310095F615 /* FingerPaintUITests.m */; };
+		9F7B1FE721F275720095F615 /* LineSegmentDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B1FE621F275720095F615 /* LineSegmentDataModel.m */; };
+		9F7B1FEA21F278A10095F615 /* PaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B1FE921F278A10095F615 /* PaintViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,8 @@
 		9F7B1FB021F272310095F615 /* FingerPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingerPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7B1FB321F272310095F615 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9F7B1FB421F272310095F615 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9F7B1FB621F272310095F615 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9F7B1FB721F272310095F615 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9F7B1FB621F272310095F615 /* PaintView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaintView.h; sourceTree = "<group>"; };
+		9F7B1FB721F272310095F615 /* PaintView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaintView.m; sourceTree = "<group>"; };
 		9F7B1FBA21F272310095F615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F7B1FBC21F272310095F615 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F7B1FBF21F272310095F615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		9F7B1FD321F272310095F615 /* FingerPaintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FingerPaintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7B1FD721F272310095F615 /* FingerPaintUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FingerPaintUITests.m; sourceTree = "<group>"; };
 		9F7B1FD921F272310095F615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F7B1FE521F275720095F615 /* LineSegmentDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineSegmentDataModel.h; sourceTree = "<group>"; };
+		9F7B1FE621F275720095F615 /* LineSegmentDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineSegmentDataModel.m; sourceTree = "<group>"; };
+		9F7B1FE821F278A10095F615 /* PaintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaintViewController.h; sourceTree = "<group>"; };
+		9F7B1FE921F278A10095F615 /* PaintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaintViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +109,13 @@
 			children = (
 				9F7B1FB321F272310095F615 /* AppDelegate.h */,
 				9F7B1FB421F272310095F615 /* AppDelegate.m */,
-				9F7B1FB621F272310095F615 /* ViewController.h */,
-				9F7B1FB721F272310095F615 /* ViewController.m */,
+				9F7B1FB621F272310095F615 /* PaintView.h */,
+				9F7B1FB721F272310095F615 /* PaintView.m */,
+				9F7B1FE521F275720095F615 /* LineSegmentDataModel.h */,
+				9F7B1FE621F275720095F615 /* LineSegmentDataModel.m */,
 				9F7B1FB921F272310095F615 /* Main.storyboard */,
+				9F7B1FE821F278A10095F615 /* PaintViewController.h */,
+				9F7B1FE921F278A10095F615 /* PaintViewController.m */,
 				9F7B1FBC21F272310095F615 /* Assets.xcassets */,
 				9F7B1FBE21F272310095F615 /* LaunchScreen.storyboard */,
 				9F7B1FC121F272310095F615 /* Info.plist */,
@@ -262,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F7B1FB821F272310095F615 /* ViewController.m in Sources */,
+				9F7B1FB821F272310095F615 /* PaintView.m in Sources */,
+				9F7B1FEA21F278A10095F615 /* PaintViewController.m in Sources */,
 				9F7B1FC321F272310095F615 /* main.m in Sources */,
 				9F7B1FB521F272310095F615 /* AppDelegate.m in Sources */,
+				9F7B1FE721F275720095F615 /* LineSegmentDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

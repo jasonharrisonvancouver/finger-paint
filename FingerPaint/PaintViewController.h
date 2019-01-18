@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PaintViewController.h
 //  FingerPaint
 //
 //  Created by jason harrison on 2019-01-18.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface PaintViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
