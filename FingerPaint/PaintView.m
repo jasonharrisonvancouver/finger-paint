@@ -65,6 +65,8 @@
     UIColor *gray = [UIColor grayColor];
     [gray setStroke];
     
+    NSLog(@"box width is %f", rect.size.width);
+
     // Loop through all elements in the segment array and draw each line
     for (LineSegmentDataModel *segment in self.line) {
         if (CGPointEqualToPoint(segment.firstPoint, segment.secondPoint)) {
@@ -77,6 +79,7 @@
         
         
         
+        NSLog(@"box width is %f", rect.size.width);
         
         NSLog(@"segment first point xy is %f %f; box top left xy is %f %f", segment.firstPoint.x, segment.firstPoint.y, rect.origin.x, rect.origin.y);
         /* only addLineToPoint if it is in the rect */
