@@ -10,7 +10,8 @@
 #import "PaintView.h"
 
 @interface PaintViewController ()
-@property (weak, nonatomic) IBOutlet PaintView *paintView;
+@property (weak, nonatomic) IBOutlet UIButton *myButton;
+@property (weak, nonatomic) IBOutlet UIView *myBox;
 
 @end
 
@@ -21,12 +22,21 @@
     // Do any additional setup after loading the view.
     
     
-    
-    
-    // pinching will create a yellow box,
-    // forcing a repaint
-    // and our code here must repaint just the rect
 }
+
+
+- (IBAction)myButtonWasPressed:(UIButton *)sender {
+    [self.myBox setHidden:!self.myBox.hidden];
+}
+
+
+
+
+
+
+//- (IBAction)paintViewWasPanned:(UIPanGestureRecognizer *)sender {
+//
+//}
 
 /*
 #pragma mark - Navigation

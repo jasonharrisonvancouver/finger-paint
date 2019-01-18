@@ -18,17 +18,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRi-Ee-nby" customClass="PaintView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRi-Ee-nby" customClass="PaintView">
                                 <rect key="frame" x="33" y="54" width="314" height="576"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EwG-v2-EbB">
+                                        <rect key="frame" x="37" y="224" width="240" height="128"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="EwG-v2-EbB" firstAttribute="top" secondItem="ZRi-Ee-nby" secondAttribute="top" constant="224" id="Ib8-JV-0PX"/>
+                                    <constraint firstItem="EwG-v2-EbB" firstAttribute="centerY" secondItem="ZRi-Ee-nby" secondAttribute="centerY" id="Vsh-UX-R7m"/>
+                                    <constraint firstItem="EwG-v2-EbB" firstAttribute="centerX" secondItem="ZRi-Ee-nby" secondAttribute="centerX" id="iEI-9a-Aua"/>
+                                    <constraint firstItem="EwG-v2-EbB" firstAttribute="leading" secondItem="ZRi-Ee-nby" secondAttribute="leading" constant="37" id="piQ-U8-BDV"/>
+                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drO-g4-Deq">
+                                <rect key="frame" x="28" y="21" width="30" height="30"/>
+                                <state key="normal" title="box"/>
+                                <connections>
+                                    <action selector="myButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BEx-9n-e76"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZRi-Ee-nby" secondAttribute="bottom" constant="37" id="3K1-h8-rD5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZRi-Ee-nby" secondAttribute="trailing" constant="28" id="40w-Fr-cF9"/>
+                            <constraint firstItem="drO-g4-Deq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="55f-E0-pv6"/>
+                            <constraint firstItem="drO-g4-Deq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="70M-Cj-eeL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="drO-g4-Deq" secondAttribute="trailing" constant="317" id="JPc-DQ-Er0"/>
+                            <constraint firstItem="ZRi-Ee-nby" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="Uak-Wa-wtk"/>
+                            <constraint firstItem="ZRi-Ee-nby" firstAttribute="top" secondItem="drO-g4-Deq" secondAttribute="bottom" constant="3" id="eLY-NU-x11"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="paintView" destination="ZRi-Ee-nby" id="u5T-K1-Oo3"/>
+                        <outlet property="myBox" destination="EwG-v2-EbB" id="xxp-6x-Unz"/>
+                        <outlet property="myButton" destination="drO-g4-Deq" id="zaL-c6-AUN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

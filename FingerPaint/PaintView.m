@@ -74,10 +74,43 @@
             [path moveToPoint:segment.firstPoint];
             continue;
         }
-        // Draw a line from the previous line segment to the first point
-        [path addLineToPoint:segment.firstPoint];
-        // Draw a line from the first point to the second point
-        [path addLineToPoint:segment.secondPoint];
+        
+        
+        
+        
+        NSLog(@"segment first point xy is %f %f; box top left xy is %f %f", segment.firstPoint.x, segment.firstPoint.y, rect.origin.x, rect.origin.y);
+        /* only addLineToPoint if it is in the rect */
+        if((segment.firstPoint.x >= rect.origin.x) &&
+           (segment.firstPoint.x <= (rect.origin.x + rect.size.width)) &&
+            (segment.firstPoint.y >= rect.origin.y) &&
+            (segment.firstPoint.y <= (rect.origin.y + rect.size.height))){
+             
+            
+            
+            
+            // Draw a line from the previous line segment to the first point
+            [path addLineToPoint:segment.firstPoint];
+            // Draw a line from the first point to the second point
+            [path addLineToPoint:segment.secondPoint];
+            UIColor *pink = [UIColor redColor];
+            [pink setStroke];
+        }
+        
+        
+//        if((segment.firstPoint.x >= (rect.origin.x - rect.size.width/2)) &&
+//           (segment.secondPoint.x <= (rect.origin.x + rect.size.width/2)) &&
+//           (segment.firstPoint.y >= (rect.origin.y - rect.size.height/2)) &&
+//           (segment.secondPoint.y <= (rect.origin.y - rect.size.height/2))){
+//            // Draw a line from the previous line segment to the first point
+//            [path addLineToPoint:segment.firstPoint];
+//            // Draw a line from the first point to the second point
+//            [path addLineToPoint:segment.secondPoint];
+//            UIColor *pink = [UIColor redColor];
+//            [pink setStroke];
+//        }
+       // UIColor *gray = [UIColor grayColor];
+        //[gray setStroke];
+ 
     }
     [path stroke];
 }
